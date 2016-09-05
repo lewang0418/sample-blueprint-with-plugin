@@ -1,0 +1,5 @@
+
+node_types:
+
+  aria.multicloud.Compute:
+    derived_from: cloudify.nodes.Compute

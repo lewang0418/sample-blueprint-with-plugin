@@ -1,0 +1,5 @@
+plugins:
+    configure-plugin:
+        executor: central_deployment_agent
+        source: configure-plugin
+        install: true
