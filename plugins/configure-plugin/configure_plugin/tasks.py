@@ -15,11 +15,16 @@
 
 from cloudify.decorators import workflow, operation
 from cloudify import ctx
-import os
+import os, tempfile
 
 
 @workflow
 def config_dns(ctx, endpoint, **kwargs):
     # setting node instance runtime property
     ctx.logger.info('workflow parameter: {0}'.format(endpoint))
-    
+ 
+    f = tempfile.NamedTemporaryFile(delete=False)
+    f.write('workflow parameter: {0}'.format(endpoint))
+    f.close()
+
+            
